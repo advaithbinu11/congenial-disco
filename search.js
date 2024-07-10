@@ -6,7 +6,17 @@ function calcValue() {
     let valuePercentage = (slider.value / slider.max) * 100;
     slider.style.background = `linear-gradient(to right, #b01515 ${valuePercentage}%, #fff ${valuePercentage}%)`;
 }
-
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    var menuIcon = document.getElementById('menu-icon');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        menuIcon.innerHTML = '&#9776;';
+    } else {
+        menu.style.display = 'flex';
+        menuIcon.innerHTML = '&times;';
+    }
+}
 slider.addEventListener('input', function() {
     calcValue();
     value.textContent = this.value;
