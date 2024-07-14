@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrEATS</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <script src="https://kit.fontawesome.com/f40c0ee74c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="background background-tint">
+    <div class="header">
+        <div class="logo">StrEATS</div>
+        <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
+        <div class="menu" id="menu">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="nearme.html">Near Me</a>
+            <a href="aboutUS.html">About Us</a>
+            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+        </div>
+    </div>
+    <div class="h4">About Us</div>
+    <div class="super-container">
+        <div id="map" class="map-container"><span>
+            <li onclick="pullPage('Mission')">Our Mission </li>
+            <li onclick="pullPage('Vision')">Our Vision</li>
+            <li onclick="pullPage('Team')">Meet Our Team</li>
+            <ul onclick="pullPage('Advaith')">- Advaith</ul>
+            <ul onclick="pullPage('Abdur')">- Abdur</ul>
+            <ul onclick="pullPage('Nate')">- Nate</ul>
+            <ul onclick="pullPage('Uday')">- Uday</ul>
+            <ul onclick="pullPage('Neshay')">- Neshay</ul>
+            <li onclick="pullPage('Contact')">Contact Us</li>
+            </span>
+        </div>
+        <div class="info-container">
+            <div class="boxholder-special" id="nofood" style="display:block">
+                <img class = "special" src="nofood.png" alt="Click a Marker!">
+            </div>
+            <div class="boxholder" id="vision" data-value="Vision" style="display:none">
+                <h5>Vision</h5>
+                <p>Food trucks are an important part of our culture in Austin. So we hope to bring awareness and customers to the food trucks that are so important to Austin</p>
+            </div>
+            <div class="boxholder" id="mission" data-value="Mission" style="display:none">
+                <h5>Mission</h5>
+                <p><i>"Helping Austin's customers, food trucks, and inspectors with ease."</i></li></p>
+                <br>
+                <p>Austin's unique blend of various cuisines is a core part of its identity. By promoting these local food vendors, we enhance this special piece of our culture.</p>
+            </div>  
+            <div class="boxholder" id="team" data-value="Team" style="display:none">
+                <h5>Team Powerhouse</h5>
+                <li>Team Powerhouse was formed on June 7th, 2024. </li>
+                <li>The main goal was to create an IT solution that will contribute to the betterment the City of Austin.</li>
+                <li>Under the supervision of Hui Wei San, we created StrEATS.</li>
+                <li>StrEATS aims to centralize food vendors' data in order to make it beneficial for all.</li>
+                <li>Its members consists of:</li>
+                <ul>- Advaith, the team lead</ul>
+                <ul>- Abdur</ul>
+                <ul>- Nate</ul>
+                <ul>- Uday</ul>
+                <ul>- Neshay</ul>
+            </div>  
+            <div class="boxholder" id="advaith" data-value="Advaith" style="display:none">
+                <h5>Advaith Binu</h5>
+                <p>Advaith</p>
+                <img src="Advaith.jpg">
+            </div>      
+            <div class="boxholder" id="abdur" data-value="Abdur" style="display:none">
+                <h5>Abdur Rhaman-Sharif</h5>
+                <p>Frontend Designer</p>
+                <img src="Abdur.jpg">
+            </div>      
+            <div class="boxholder" id="nate" data-value="Nate"  style="display:none">
+                <h5>Nate Donus</h5>
+                <p>Social Media & Outreach</p>
+                <img src="nate.jpg">
+            </div>      
+            <div class="boxholder" id="uday" data-value="Uday"  style="display:none">
+                <h5>Uday Gunturu</h5>
+                <p>Data Manager & Frontend Designer</p>
+                <img src = "UDAY PFP.jpg">
+            </div>      
+            <div class="boxholder" id="neshay" data-value="Neshay"  style="display:none">
+                <h5>Neshay Lamsal</h5>
+                <p>Frontend Designer</p>
+                <img src="IMG_6236.JPG">
+            </div>      
+            <div class="boxholder" id="contact" data-value="Contact" style="display:none">
+                <h5>Contact Us</h5>
+                <p>Want to give feedback for the website? Shoot us a email here:</p>
+                <p><i class="fa-solid fa-envelope"></i> : powerhouse.team07@gmail.com</p></p>
+                <br>
+                <br>
+                <p>See a food truck compliance issue?</p>
+                <p>Contact the City of Austin Environmental Health services department.</p>
+                <p><i class="fa-solid fa-phone"></i> : 3-1-1</p>
+                <p><a href="https://www.austintexas.gov/email/ehsdservice"><i class="fa-solid fa-envelope"></i> : EHS Email</a></p>
+            </div>                        
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        var menuIcon = document.getElementById('menu-icon');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+            menuIcon.innerHTML = '&#9776;';
+        } else {
+            menu.style.display = 'flex';
+            menuIcon.innerHTML = '&times;';
+        }
+    }
+    function pullPage(event) {
+        const elements = {
+          mission: document.getElementById("mission"),
+          vision: document.getElementById("vision"),
+          contact: document.getElementById("contact"),
+          team: document.getElementById("team"),
+          advaith: document.getElementById("advaith"),
+          nate: document.getElementById("nate"),
+          uday: document.getElementById("uday"),
+          neshay: document.getElementById("neshay"),
+          abdur: document.getElementById("abdur"),
+          nofood:document.getElementById("nofood")
+        };
+      
+        switch (event) {
+          case "Mission":
+            elements.mission.style.display = "block"; 
+            console.log(event);
+            break;
+          case "Vision":
+            elements.vision.style.display = "block"; 
+            console.log(event);
+            break;
+          case "Team":
+            elements.team.style.display = "block"; 
+            console.log(event);
+            break;
+          case "Contact":
+            elements.contact.style.display = "block"; 
+            console.log(event);
+            break;
+        case "Advaith":
+            elements.advaith.style.display = "block"; 
+            console.log(event);
+            break;
+        case "Abdur":
+            elements.abdur.style.display = "block"; 
+            console.log(event);
+            break;
+        case "Nate":
+            elements.nate.style.display = "block"; 
+            console.log(event);
+            break;
+        case "Neshay":
+            elements.neshay.style.display = "block"; 
+            console.log(event);
+            break;
+        case "Uday":
+            elements.uday.style.display = "block"; 
+            console.log(event);
+            break;
+          default:
+            // Handle invalid event (optional)
+            console.error("Invalid event:", event);
+        }
+      
+        // Hide all elements except the one shown
+        for (const elementId in elements) {
+          if (elements[elementId].dataset.value !== event) {
+            elements[elementId].style.display = "none";
+          }
+        }
+
+      }
+</script>
+</body>
+</html>
