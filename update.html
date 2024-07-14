@@ -535,34 +535,34 @@
           }
       
       
-          function submitForm(formData) {
-            console.log(formData);
-            fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/update/', {
-                method: 'POST', // Or 'PUT', 'DELETE', etc.
-                headers: {
-                    'Content-Type': 'application/json'
-                    // Add any additional headers if needed
-                },
-                body: formData // Convert data to JSON string
-            })
-            .then(response => {
-                // Handle response
-                if (response.ok) {
-                    // Request was successful
-                    alert('Form submitted successfully!');
-                    location.reload();
-                } else {
-                    // Request failed
-                    alert('Error submitting form!');
-                    alert(response)
-                }
-            })
-            .catch(error => {
-                // Handle error
-                console.error('Error:', error);
+    function submitForm(formData) {
+        console.log(formData)
+        fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/update', {
+            method: 'POST', // Or 'PUT', 'DELETE', etc.
+            headers: {
+                'Content-Type': 'application/json'
+                // Add any additional headers if needed
+            },
+            body: formData // Convert data to JSON string
+        })
+        .then(response => {
+            // Handle response
+            if (response.ok) {
+                // Request was successful
+                alert('Form submitted successfully!');
+                location.reload();
+            } else {
+                // Request failed
                 alert('Error submitting form!');
-            });
-        }
+                alert(response)
+            }
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Error:', error);
+            alert('Error submitting form!');
+        });
+    }
           function toggleMenu() {
             var menu = document.getElementById('menu');
             var menuIcon = document.getElementById('menu-icon');
