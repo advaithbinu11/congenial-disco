@@ -537,10 +537,10 @@
       
           function submitForm(formData) {
             console.log(formData);
-            fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/update', {
+            fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/update/', {
                 method: 'POST', // Or 'PUT', 'DELETE', etc.
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                     // Add any additional headers if needed
                 },
                 body: formData // Convert data to JSON string
