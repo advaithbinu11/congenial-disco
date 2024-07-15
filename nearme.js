@@ -19,6 +19,32 @@ slider.addEventListener('change', function() {
 
 calcValue();
 
+function adjustFontSize(element) {
+    let length = element.textContent.length;
+    let fontSize = 22; // Base font size
+     if (length > 20 && length < 30) {
+        fontSize = 22;
+    } else if (length > 30) {
+        fontSize = 18
+    }
+    element.style.fontSize = fontSize + 'px';
+}
+
+function displayVendorInfo(vendor, vendorLocation) {
+    infoContainer.classList.add('active');
+    const vendorNameElement = document.getElementById('vendorName');
+    vendorNameElement.textContent = vendor.vendorName;
+    adjustFontSize(vendorNameElement); // Adjust font size based on text length
+     // Extract the street address
+    
+    document.getElementById('vendorAddress').textContent = vendor.vendorAddress.split(",")[0].split("AUSTIN")[0];
+    document.getElementById('vendorPhone').textContent = vendor.vendorPhone;
+    document.getElementById('vendorId').textContent =  "ID - " + vendor.vendorId;
+    if (userLocation) {
+        const distance = haversine(userLocation, vendorLocation).toFixed(2);
+        document.getElementById('distance').textContent = `${distance} mi`;
+    }
+}
 
 function toggleMenu() {
     var menu = document.getElementById('menu');
@@ -173,17 +199,6 @@ async function updateVendorsOnMap(lat, lon, radius) {
     }
 }
 
-function displayVendorInfo(vendor, vendorLocation) {
-    infoContainer.classList.add('active');
-    document.getElementById('vendorName').textContent = `Name: ${vendor.vendorName}`;
-    document.getElementById('vendorAddress').textContent = `Address: ${vendor.vendorAddress}`;
-    document.getElementById('vendorPhone').textContent = `Phone: ${vendor.vendorPhone}`;
-    document.getElementById('vendorId').textContent = `ID: ${vendor.vendorId}`;
-    if (userLocation) {
-        const distance = haversine(userLocation, vendorLocation).toFixed(2);
-        document.getElementById('distance').textContent = `Distance: ${distance} miles`;
-    }
-}
 
 function hideVendorInfo() {
     infoContainer.classList.remove('active');
