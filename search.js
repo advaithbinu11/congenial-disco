@@ -6,17 +6,7 @@ function calcValue() {
     let valuePercentage = (slider.value / slider.max) * 100;
     slider.style.background = `linear-gradient(to right, #b01515 ${valuePercentage}%, #fff ${valuePercentage}%)`;
 }
-function toggleMenu() {
-    var menu = document.getElementById('menu');
-    var menuIcon = document.getElementById('menu-icon');
-    if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-        menuIcon.innerHTML = '&#9776;';
-    } else {
-        menu.style.display = 'flex';
-        menuIcon.innerHTML = '&times;';
-    }
-}
+
 slider.addEventListener('input', function() {
     calcValue();
     value.textContent = this.value;
@@ -100,17 +90,44 @@ async function updateVendorsList(lat = userLocation[0], lon = userLocation[1], r
     }
 }
 
+function adjustFontSize(element) {
+    let length = element.textContent.length;
+    let fontSize = 22; // Base font size
+     if (length > 20 && length < 30) {
+        fontSize = 22;
+    } else if (length > 30) {
+        fontSize = 18
+    }
+    element.style.fontSize = fontSize + 'px';
+}
 function displayVendorInfo(vendor, vendorLocation) {
     infoContainer.classList.add('active');
-    document.getElementById('vendorName').textContent = `Name: ${vendor.vendorName}`;
-    document.getElementById('vendorAddress').textContent = `Address: ${vendor.vendorAddress}`;
-    document.getElementById('vendorPhone').textContent = `Phone: ${vendor.vendorPhone}`;
-    document.getElementById('vendorId').textContent = `ID: ${vendor.vendorId}`;
+    const vendorNameElement = document.getElementById('vendorName');
+    vendorNameElement.textContent = vendor.vendorName;
+    adjustFontSize(vendorNameElement); // Adjust font size based on text length
+     // Extract the street address
+    
+    document.getElementById('vendorAddress').textContent = vendor.vendorAddress.split(",")[0].split("AUSTIN")[0];
+    document.getElementById('vendorPhone').textContent = vendor.vendorPhone;
+    document.getElementById('vendorId').textContent =  "ID - " + vendor.vendorId;
     if (userLocation) {
         const distance = haversine(userLocation, vendorLocation).toFixed(2);
-        document.getElementById('distance').textContent = `Distance: ${distance} miles`;
+        document.getElementById('distance').textContent = `${distance} mi`;
     }
 }
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    var menuIcon = document.getElementById('menu-icon');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        menuIcon.innerHTML = '&#9776;';
+    } else {
+        menu.style.display = 'flex';
+        menuIcon.innerHTML = '&times;';
+    }
+}
+
+
 function filterList() {
     const searchTerm = document.getElementById('search-bar').value.toLowerCase();
     const listItems = document.querySelectorAll('.list-item');
