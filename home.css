@@ -21,7 +21,10 @@ body, html {
     font-family: 'Bold', Arial, sans-serif;
     
 }
-
+.container img{
+	width:25%;
+	height:25%
+}
 .background {
   
   background-image:url('title-image.jpg');
