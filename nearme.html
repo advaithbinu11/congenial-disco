@@ -13,46 +13,62 @@
 
 </head>
 <body>
-<div class="background background-tint">
-    <div class="header">
-        <div class="logo">StrEATS</div>
-        <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
-        <div class="menu" id="menu">
-            <a href="index.html">Home</a>
-            <a href="search.html">Search</a>
-            <a href="nearme.html">Near Me</a>
-            <a href="aboutUS.html">About Us</a>
-            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+    <div class="background background-tint">
+        <div class="header">
+            <div class="logo">StrEATS</div>
+            <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
+            <div class="menu" id="menu">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="nearme.html">Near Me</a>
+                <a href="aboutUS.html">About Us</a>
+                <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+            </div>
         </div>
-    </div>
-    <div class="h4">Near Me</div>
-    <div class="super-container">
-        <div id="map" class="map-container"></div>
-        <div class="info-container">
-            <div class="boxholder">
-                <img src="nofood.png" alt="Click a Marker!">
-                <div class="info-content">
-                    <p id="vendorName"></p>
-                    <p id="vendorAddress"></p>
-                    <p id="vendorPhone"></p>
-                    <p id="vendorId"></p>
-                    <p id="distance"></p>
+        <div class="h4">Near Me</div>
+    
+        <div class="final-cont"> 
+            <label for="address">Choose Address:</label>
+            <input type="text" id="address" name="fname" class="finaltxt">
+            <button type="button" onClick="updateAddress(event)" class="update-button">Update</button>
+        </div>
+        
+        <div class="ucontainer">
+            <label for="address">Search Radius:</label>
+            <input type="range" min="0" max="5" value="1" class="slider" step="0.1" id="range">
+            <div class="value">1</div>
+        </div>
+    
+        <div class="super-container">
+            <div id="map" class="map-container"></div>
+            <div class="info-container">
+                <div class="boxholder">
+                    <img src="nofood.png" alt="Click a Marker!">
+                    <div class="info-content">
+                        <div class="superfincon">
+                        <p id="vendorName" class="vname"></p>
+                        </div>
+                        <div class="superfincon">
+                        <p id="vendorAddress" class="aname"></p>
+                        </div>
+                        <div class="superfincon">
+                        <p id="vendorPhone" class="phone"></p>
+                        </div>
+                        <div class="superfincon">
+                        <p id="vendorId" class="id"></p>
+                        </div>
+                        <div class="superfincon">
+                        <p id="distance" class="dist"></p>
+                        </div>
+                    </div>
+                    <br><br><br><br><br><br>
                 </div>
-                <br><br><br><br><br><br>
-                <label for="address">Choose an address</address>:</label>
-                <input type="text" id="address" name="fname">
-                <button type="button" onClick="updateAddress(event)">Update</button>
             </div>
         </div>
     </div>
-    <div class="h5">Search Radius (Miles)</div>
-    <div class="ucontainer">
-        <input type="range" min="0" max="5" value="1" class="slider" step="0.1" id="range">
-        <div class="value">10</div>
-    </div>
-</div>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
-<script src="nearme.js"></script>
-</body>
-</html>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
+    <script src="nearme.js"></script>
+    </body>
+    </html>
+    
