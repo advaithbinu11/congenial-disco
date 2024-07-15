@@ -12,18 +12,18 @@
 <body>
 <div class="background background-tint">
     <div class="header">
-        <div class="logo">StrEATS</div>
+        <div class="logo">StrEATS.</div>
         <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
         <div class="menu" id="menu">
             <a href="index.html">Home</a>
             <a href="search.html">Search</a>
             <a href="nearme.html">Near Me</a>
             <a href="aboutUS.html">About Us</a>
-            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Vendor Login</a>
+
         </div>
     </div>
     <div class="container">
-        <img src="logo.png"></img>
         <h1>Your Next Bite Awaits.</h1>
         <h2>Extraordinary Finds.</h2>
         <div class="mouse_scroll">
@@ -38,63 +38,30 @@
         
     </div>
 
-    <div class="o-container">
-        <div class="ourp">
-            Our Picks
+    <div class="h5">Featured Trucks.</div>
+
+    <div class="grid-container">
+        <div class="grid-item" id="item1">
+            <div class="overlay"><img src="foodtruckad1hover.png" alt=""></div>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">McDonald's</div>
-            <div class="grid-item">Subway</div>
-            <div class="grid-item">KFC</div>
-        
+        <div class="grid-item" id="item2">
+            <div class="overlay"><img src="foodtruckad2hover.png" alt=""></div>
         </div>
-          </div>
-
-
-          <div class="topr">
-            Top Rated
+        <div class="grid-item" id="item3">
+            <div class="overlay"><img src="foodtruckad3hover.png" alt=""></div>
         </div>
+    </div>
 
+    <div class="about-container">
+        <div class="button-row">
 
-          <div class="grid-container">
-            <div class="grid-item">McDonald's</div>
-            <div class="grid-item">Subway</div>
-            <div class="grid-item">KFC</div>
-            <div class="grid-item">Wendy's</div>
-            <div class="grid-item">Burger King</div>
-            <div class="grid-item">Popeyes</div>
-          </div>
+            <a href="search.html" class="about-button">Search</a>
+            <a href="nearme.html" class="about-button">Near Me</a>
+            <a href="aboutUS.html" class="about-button">About Us</a>
+            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html" class="about-button">Vendor Login</a>
 
-
-
-          <div class="newt">
-            New Trucks
         </div>
-
-
-          <div class="grid-container">
-            <div class="grid-item">Wendy's</div>
-            <div class="grid-item">Burger King</div>
-            <div class="grid-item">Popeyes</div>
-          </div>
-
-
-
-          <div class="other">
-            do later
-        </div>
-
-
-          <div class="grid-container">
-            <div class="grid-item1"></div>
-            <div class="grid-item2"></div>
-            <div class="grid-item3"></div>
-          </div>
-
-
-
-
-          
+    </div>
 </div>
 <script>
     function toggleMenu() {
@@ -113,6 +80,5 @@
         window.location.href = "#about";
     });
 </script>
-
 </body>
 </html>
