@@ -22,7 +22,7 @@
             <a href="search.html">Search</a>
             <a href="nearme.html">Near Me</a>
             <a href="aboutUS.html">About Us</a>
-            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+            <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Vendor Login</a>
         </div>
     </div>
     <div class="h4">Search</div>
@@ -31,27 +31,35 @@
         <input type="text" id="search-bar" placeholder="Search for Vendors..." onkeyup="filterList()">
     </div>
 
-
+    <div class="ucontainer">
+        <label for="address">Search Radius:</label>
+        <input type="range" min="0" max="50" value="1" class="slider" step="0.1" id="range">
+        <div class="value">1</div>
+    </div>
     <div class="super-container">
-
         <div id="list-container" class="list-container"></div>
         <div class="info-container">
             <div class="boxholder">
                 <img src="nofood.png" alt="Click a Marker!">
                 <div class="info-content">
-                    <p id="vendorName"></p>
-                    <p id="vendorAddress"></p>
-                    <p id="vendorPhone"></p>
-                    <p id="vendorId"></p>
-                    <p id="distance"></p>
+                    <div class="superfincon">
+                        <p id="vendorName" class="vname"></p>
+                    </div>
+                    <div class="superfincon">
+                        <p id="vendorAddress" class="aname"></p>
+                    </div>
+                    <div class="superfincon">
+                        <p id="vendorPhone" class="phone"></p>
+                    </div>
+                    <div class="superfincon">
+                        <p id="vendorId" class="id"></p>
+                    </div>
+                    <div class="superfincon">
+                        <p id="distance" class="dist"></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="h5">Search Radius (Miles)</div>
-    <div class="ucontainer">
-        <input type="range" min="0" max="50" value="1" class="slider" step="1" id="range">
-        <div class="value">10</div>
     </div>
 </div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
