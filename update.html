@@ -1,559 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information Form</title>
-    <style>
-        .h4 {
-            font-family: 'Bold';
-            height: 60px;
-            width: 100%;
-            position: relative;
-            margin: 0 auto;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-            font-size: 60px;
-            text-shadow: 2px 2px 2px rgb(255, 47, 47);
-          }
-        @font-face {
-            font-family: 'Bold';
-            src: url('TT Firs Neue Trial Bold.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-          }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpdateVendor</title>
+<style>
+    .h4 {
+        font-family: 'Bold';
+        height: 60px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 60px;
+        text-shadow: 2px 2px 2px rgb(255, 47, 47);
+      }
+    @font-face {
+        font-family: 'Bold';
+        src: url('TT Firs Neue Trial Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      @font-face {
+        font-family: 'Medium';
+        src: url('TT Firs Neue Trial Medium.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      /* Global Styles from Code B */
+      body, html {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        font-family: 'Bold', Arial, sans-serif;
+      }
+      
+      /* Super Container, Background, Tint from Code B (Adjust as needed) */
+      
+      .background {
+        background-image: url('title-image.jpg');
+        color: white;
+        transition: background-color 0.5s ease; 
+        background-position: center; /* Center the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        object-fit: cover;
+      }
+      
+      .background-tint {
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: multiply;
+        opacity: 0; /* Initial state with no opacity */
+        animation: tintIn  1s forwards; /* Animation with 3s delay and 3s duration */
+      }
+      body, html {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        font-family: 'Bold', Arial, sans-serif;
+      }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .section {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #e74141;
+        width: 400px;
+        position: relative;
+    }
+    .section h2 {
+        margin: 0;
+        padding: 0 10px;
+        position: absolute;
+        top: -14px;
+        left: 20px;
+        background-color: #a92f2f;
+        font-size: 18px;
+    }
+    .info {
+        margin-bottom: 20px;
+    }
+    .info label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .info span {
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    label {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    input, select {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    @keyframes tintIn {
+        to {
+            opacity: 1; /* Final state with full opacity */
+        }
+        }
+        
+        .header {
+          background-color: rgb(255, 255, 255);
+          position: relative;
+          color: #000000;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1.5px solid #000000;
+          margin-bottom: 100px;
+        }
+        
+        .header .logo {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+        .menu-icon {
+          cursor: pointer;
+          font-size: 30px;
+        }
+        .container {
+          text-align: center;
+          padding: 50px;
+          position: relative;
+          background: transparent; 
+          height: 100vh;
+          border-bottom: 1.5px solid #000000;
+        }
+        
+        
+        .container h1 {
+          margin-top: 225px;
+          font-size: 4em;
+          margin-bottom: 0px;
+          text-shadow: 2px 2px 2px rgb(255, 0, 0);
+        }
+        
+        .container h2 {
+          font-family: 'Medium';
+          margin-top: 0px;
+          font-size: 3em;
+          text-shadow: 2px 2px 2px rgb(255, 0, 0);
+        
+        }
+        
+        
+        .o-container {
+        text-align: center;
+        padding: 50px;
+        position: relative;
+        background: transparent; 
+        width: 100%;
+        padding-top: 90%;
+        border-bottom: 1.5px solid #000000;
+        }
+        
+        .menu {
+          font-family: 'Medium';
+          display: none;
+          flex-direction: row;
+          align-items: center;
+          gap: 50px;
+          position: absolute;
+          top: 20px;
+          right: 70px;
+        }
+        
+        .menu a {
+          text-decoration: none;
+          color: black;
+          font-size: 1.2em;
+        }
+        
+        .menu a:hover {
+          color: #ffffff;
+        }
+        
+        .grid-container {
+          font-size: 20px;
+          font-family: 'Medium';
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px; 
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 100px;
+        }
+        
+        .grid-item {
+          padding: 20px; 
+          border-radius: 10px; 
+          text-align: center; 
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
           
-          @font-face {
-            font-family: 'Medium';
-            src: url('TT Firs Neue Trial Medium.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-          }
-          
-          /* Global Styles from Code B */
-          body, html {
-            margin: 0;
-            padding: 0;
-            align-items: center;
-            font-family: 'Bold', Arial, sans-serif;
-          }
-          
-          /* Super Container, Background, Tint from Code B (Adjust as needed) */
-          
-          .background {
-            background-image: url('title-image.jpg');
-            color: white;
-            transition: background-color 0.5s ease; 
-            background-position: center; /* Center the image */
-            background-size: cover; /* Resize the background image to cover the entire container */
-            object-fit: cover;
-            height: 100vh;
-          }
-          
-          .background-tint {
-            background-color: rgba(0, 0, 0, 0.6);
-            background-blend-mode: multiply;
-            opacity: 0; /* Initial state with no opacity */
-            animation: tintIn  1s forwards; /* Animation with 3s delay and 3s duration */
-          }
-          body, html {
-            margin: 0;
-            padding: 0;
-            align-items: center;
-            font-family: 'Bold', Arial, sans-serif;
-          }
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+          width: 100%; 
+          padding-top: 90%; 
+          position: relative;
         }
-        .section {
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            background-color: #e74141;
-            width: 400px;
-            position: relative;
-            height: 325px;
+        
+        .grid-item::after {
+          content: ''; 
+          display: block; 
+          position: absolute; 
+          top: 0; 
+          left: 0;
+          width: 100%; 
+          height: 100%;
         }
-        .section h2 {
-            margin: 0;
-            padding: 0 10px;
-            position: absolute;
-            border-radius: 6px;
-            top: -14px;
-            left: 20px;
-            background-color: #a92f2f;
-            font-size: 18px;
-        }
-        .info {
-            margin-bottom: 20px;
-        }
-        .info label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        .info span {
-            display: block;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 5px;
-            font-size: 20px;
-        }
-        label {
-            display: block;
-            margin: 10px 0;
-            font-size: 16px;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #fff;
-            font-size: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color:#e74141;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            font-family: 'Bold';
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        @keyframes tintIn {
-            to {
-                opacity: 1; /* Final state with full opacity */
-            }
-            }
-            
-            .header {
-              background-color: rgb(255, 255, 255);
-              position: relative;
-              color: #000000;
-              padding: 10px 20px;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              border-bottom: 1.5px solid #000000;
-              margin-bottom: 100px;
-              border-bottom: 5px solid red;
-
-            }
-            
-            .header .logo {
-              font-size: 24px;
-              font-weight: bold;
-            }
-            
-            .menu-icon {
-              cursor: pointer;
-              font-size: 30px;
-            }
-            .container {
-              text-align: center;
-              padding: 50px;
-              position: relative;
-              background: transparent; 
-              height: 100vh;
-              border-bottom: 1.5px solid #000000;
-            }
-            
-            
-            .container h1 {
-              margin-top: 225px;
-              font-size: 4em;
-              margin-bottom: 0px;
-              text-shadow: 2px 2px 2px rgb(255, 0, 0);
-            }
-            
-            .container h2 {
-              font-family: 'Medium';
-              margin-top: 0px;
-              font-size: 3em;
-              text-shadow: 2px 2px 2px rgb(255, 0, 0);
-            
-            }
-            
-            
-            .o-container {
-            text-align: center;
-            padding: 50px;
-            position: relative;
-            background: transparent; 
-            width: 100%;
-            padding-top: 90%;
-            border-bottom: 1.5px solid #000000;
-            }
-            
-            .menu {
-              font-family: 'Medium';
-              display: none;
-              flex-direction: row;
-              align-items: center;
-              gap: 50px;
+        
+          .grid-item:hover::before {
+              content: "";
               position: absolute;
-              top: 20px;
-              right: 70px;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              transition: opacity 40s ease;
             }
-            
-            .menu a {
-  transition: background-color 1s, color 1s;
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-}
-
-.menu a:hover {
-    color: #ffffff;
-}
-
-            
-            .grid-container {
+        
+            .grid-item:hover::after {
+              content: "Extra Info";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
               font-size: 20px;
-              font-family: 'Medium';
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 20px; 
-              width: 90%;
-              margin: 0 auto;
-              margin-top: 100px;
+              font-weight: bold;
+              opacity: 0;
+              background: linear-gradient(to bottom, rgba(60, 60, 60, 30), rgba(120, 120, 120, 30), rgba(0,0,0,0));
+              border-radius: 10px;
+              transition: opacity 40s ease;
             }
-            
-            .grid-item {
+            .info span{
+                color:#000000
+            }
+        
+        
+            .grid-item1 {
               padding: 20px; 
               border-radius: 10px; 
               text-align: center; 
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              
+              width: 100%;
+              padding-top: 100%;
+              position: relative;
+        
+              background-image: url(search-iconng);
+              background-size: 400px;
+            }
+        
+            .grid-item2 {
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center; 
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              
+              width: 100%; 
+              padding-top: 100%; 
+              position: relative; 
+            }
+            td {
+              font-size: 30px;
+              justify-content: center;  /* Adjust the value (in pixels) to your desired width */
+              vertical-align: top;
+            }
+            td input[type="text"] {
+              width: 200px;  /* Adjust the value (in pixels) to your desired width */
+              height: 30px;  /* Adjust the value (in pixels) to your desired height */
+            }
+            .grid-item3 {
+              padding: 20px; 
+              border-radius: 10px;
+              text-align: center; 
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        
+              background-image: url(map-graphic.jpg);
+              background-size: 400px;
+        
               
               width: 100%; 
-              padding-top: 90%; 
-              position: relative;
+              padding-top: 100%; 
+              position: relative; 
             }
-            
-            .grid-item::after {
-              content: ''; 
-              display: block; 
-              position: absolute; 
-              top: 0; 
-              left: 0;
-              width: 100%; 
-              height: 100%;
-            }
-            
-              .grid-item:hover::before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  opacity: 0;
-                  transition: opacity 40s ease;
-                }
-            
-                .grid-item:hover::after {
-                  content: "Extra Info";
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  color: white;
-                  font-size: 20px;
-                  font-weight: bold;
-                  opacity: 0;
-                  background: linear-gradient(to bottom, rgba(60, 60, 60, 30), rgba(120, 120, 120, 30), rgba(0,0,0,0));
-                  border-radius: 10px;
-                  transition: opacity 40s ease;
-                }
-                .info span{
-                    color:#000000
-                }
-            
-            
-                .grid-item1 {
-                  padding: 20px; 
-                  border-radius: 10px; 
-                  text-align: center; 
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                  
-                  width: 100%;
-                  padding-top: 100%;
-                  position: relative;
-            
-                  background-image: url(search-iconng);
-                  background-size: 400px;
-                }
-            
-                .grid-item2 {
-                  padding: 20px;
-                  border-radius: 10px;
-                  text-align: center; 
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                  
-                  width: 100%; 
-                  padding-top: 100%; 
-                  position: relative; 
-                }
-                td {
-                  font-size: 30px;
-                  justify-content: center;  /* Adjust the value (in pixels) to your desired width */
-                }
-                td input[type="text"] {
-                  width: 200px;  /* Adjust the value (in pixels) to your desired width */
-                  height: 30px;  /* Adjust the value (in pixels) to your desired height */
-                  border-color: #fff;
-                  
-                }
-                .grid-item3 {
-                  padding: 20px; 
-                  border-radius: 10px;
-                  text-align: center; 
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-            
-                  background-image: url(map-graphic.jpg);
-                  background-size: 400px;
-            
-                  
-                  width: 100%; 
-                  padding-top: 100%; 
-                  position: relative; 
-                }
-                *, *:before, *:after {
-              -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-              }
-              .mouse_scroll {
-              display: block;
-              margin: 0 auto;
-              width: 24px;
-              height: 100px;
-              margin-top: 200px;
-              }
-              .m_scroll_arrows
-              {
-              display: block;
-              width: 5px;
-              height: 5px;
-              -ms-transform: rotate(45deg); /* IE 9 */
-              -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-              transform: rotate(45deg);
-              
-              border-right: 3.6px solid white;
-              border-bottom: 3.6px solid rgb(224, 182, 182);
-              margin: 0 0 3px 4px;
-            
-              width: 16px;
-              height: 16px;
-              }
-              .unu
-              {
-              margin-top: 1px;
-              }
-              .unu, .doi, .trei
-              {
-                -webkit-animation: mouse-scroll 1s infinite;
-                -moz-animation: mouse-scroll 1s infinite;
-                animation: mouse-scroll 1s infinite;
-            
-              }
-              .unu
-              {
-              -webkit-animation-delay: .1s;
-              -moz-animation-delay: .1s;
-              -webkit-animation-direction: alternate;
-            
-              animation-direction: alternate;
-              animation-delay: alternate;
-              }
-              .doi
-              {
-              -webkit-animation-delay: .2s;
-              -moz-animation-delay: .2s;
-              -webkit-animation-direction: alternate;
-            
-              animation-delay: .2s;
-              animation-direction: alternate;
-            
-              margin-top: -6px;
-              }
-              .mouse {
-              height: 42px;
-              width: 24px;
-              border-radius: 14px;
-              transform: none;
-              border: 4px solid white;
-              top: 170px;
-              }
-              .wheel {
-              height: 5px;
-              width: 2px;
-              display: block;
-              margin: 5px auto;
-              background: red;
-              position: relative;
-            
-              height: 4px;
-              width: 4px;
-              border: 2.6px solid rgb(243, 160, 160);
-              -webkit-border-radius: 8px;
-                      border-radius: 8px;
-              }
-              .currAdd {
-                font-size: 20px;
-                color:#000000
-              }
-              .wheel {
-              -webkit-animation: mouse-wheel 0.6s linear infinite;
-              -moz-animation: mouse-wheel 0.6s linear infinite;
-              animation: mouse-wheel 0.6s linear infinite;
-              }
-              @-webkit-keyframes mouse-wheel{
-              0% {
-                opacity: 1;
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0);
-              }
-              100% {
-                opacity: 0;
-                -webkit-transform: translateY(6px);
-                -ms-transform: translateY(6px);
-                transform: translateY(6px);
-              }
-              }
-              @-moz-keyframes mouse-wheel {
-              0% { top: 1px; }
-              25% { top: 2px; }
-              50% { top: 3px;}
-              75% { top: 2px;}
-              100% { top: 1px;}
-              }
-              @-o-keyframes mouse-wheel {
-            
-              0% { top: 1px; }
-              25% { top: 2px; }
-              50% { top: 3px;}
-              75% { top: 2px;}
-              100% { top: 1px;}
-              }
-              @keyframes mouse-wheel {
-            
-              0% { top: 1px; }
-              25% { top: 2px; }
-              50% { top: 3px;}
-              75% { top: 2px;}
-              100% { top: 1px;}
-              }
-              @-webkit-keyframes mouse-scroll {
-            
-              0%   { opacity: 0;}
-              50%  { opacity: .425;}
-              100% { opacity: 1;}
-              }
-              @-moz-keyframes mouse-scroll {
-            
-              0%   { opacity: 0; }
-              50%  { opacity: .475; }
-              100% { opacity: 1; }
-              }
-              @-o-keyframes mouse-scroll {
-            
-              0%   { opacity: 0; }
-              50%  { opacity: .45; }
-              100% { opacity: 1; }
-              }
-              @keyframes mouse-scroll {
-            
-              0%   { opacity: 0; }
-              50%  { opacity: .5; }
-              100% { opacity: 1; }
-              }
-              .header .logo {
-                font-size: 24px;
-                font-weight: bold;
-              }
-    </style>
-    <script>
-        const vendor_id = localStorage.getItem('vendor_id')
-        var currAddress = "";
-        var currName = "";
-        var currNumber = "";
-        theData = {}
-        theData['id'] = vendor_id;
-        theData = JSON.stringify(theData)
-        fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/getavendor/', {
-          method: 'POST', // Or 'PUT', 'DELETE', etc.
-          headers: {
-              'Content-Type': 'application/json'
-              // Add any additional headers if needed
-          },
-          body: theData // Convert data to JSON string
-      })
-      .then(data => data.json()).then(response => {
-          // Handle response
-          obj = JSON.parse(response["body"])
-          currAddress = obj["Items"][0]["vendor_address"]["S"]
-          document.getElementById('currAdd').innerHTML = currAddress;
-          currName = obj["Items"][0]["vendor_name"]["S"]
-          document.getElementById('currName').innerHTML = currName;
-          currNumber = obj["Items"][0]["vendor_phone"]["S"]
-          document.getElementById('currPhone').innerHTML = currNumber;
-          if (response) {
-              // Request was successful
-          } else {
-              // Request failed
-              //alert('Error submitting form!');
-              //alert(response)
+            *, *:before, *:after {
+          -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
           }
-      })
-      .catch(error => {
-          // Handle error
-          console.error('Error:', error);
-          //alert('Error submitting form!');
-      });
-          function saveData(event) {
-              var formData = {};
-              console.log(typeof currAddress)
-              formData['id'] = vendor_id
-              formData['address'] = document.getElementById('newAddress').value 
-              if(formData['address']===""){
-                formData['address'] = currAddress;
-              }
-              formData['phone'] = document.getElementById('newPhone').value
-              if(formData['phone']===""){
-                formData['phone'] = currNumber;
-              }
-              formData['name'] = document.getElementById('newName').value
-              if(formData['name']===""){
-                formData['name'] = currName;
-              }
-              var records = {}
-              records["body"] = formData
-      
-              submitForm(JSON.stringify(records))
+          .mouse_scroll {
+          display: block;
+          margin: 0 auto;
+          width: 24px;
+          height: 100px;
+          margin-top: 200px;
           }
-      
-      
+          .m_scroll_arrows
+          {
+          display: block;
+          width: 5px;
+          height: 5px;
+          -ms-transform: rotate(45deg); /* IE 9 */
+          -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+          transform: rotate(45deg);
+          
+          border-right: 3.6px solid white;
+          border-bottom: 3.6px solid rgb(224, 182, 182);
+          margin: 0 0 3px 4px;
+        
+          width: 16px;
+          height: 16px;
+          }
+          .unu
+          {
+          margin-top: 1px;
+          }
+          .unu, .doi, .trei
+          {
+            -webkit-animation: mouse-scroll 1s infinite;
+            -moz-animation: mouse-scroll 1s infinite;
+            animation: mouse-scroll 1s infinite;
+        
+          }
+          .unu
+          {
+          -webkit-animation-delay: .1s;
+          -moz-animation-delay: .1s;
+          -webkit-animation-direction: alternate;
+        
+          animation-direction: alternate;
+          animation-delay: alternate;
+          }
+          .doi
+          {
+          -webkit-animation-delay: .2s;
+          -moz-animation-delay: .2s;
+          -webkit-animation-direction: alternate;
+        
+          animation-delay: .2s;
+          animation-direction: alternate;
+        
+          margin-top: -6px;
+          }
+          .mouse {
+          height: 42px;
+          width: 24px;
+          border-radius: 14px;
+          transform: none;
+          border: 4px solid white;
+          top: 170px;
+          }
+          .wheel {
+          height: 5px;
+          width: 2px;
+          display: block;
+          margin: 5px auto;
+          background: red;
+          position: relative;
+        
+          height: 4px;
+          width: 4px;
+          border: 2.6px solid rgb(243, 160, 160);
+          -webkit-border-radius: 8px;
+                  border-radius: 8px;
+          }
+          .currAdd {
+            font-size: 20px;
+            color:#000000
+          }
+          .wheel {
+          -webkit-animation: mouse-wheel 0.6s linear infinite;
+          -moz-animation: mouse-wheel 0.6s linear infinite;
+          animation: mouse-wheel 0.6s linear infinite;
+          }
+          @-webkit-keyframes mouse-wheel{
+          0% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 0;
+            -webkit-transform: translateY(6px);
+            -ms-transform: translateY(6px);
+            transform: translateY(6px);
+          }
+          }
+          @-moz-keyframes mouse-wheel {
+          0% { top: 1px; }
+          25% { top: 2px; }
+          50% { top: 3px;}
+          75% { top: 2px;}
+          100% { top: 1px;}
+          }
+          @-o-keyframes mouse-wheel {
+        
+          0% { top: 1px; }
+          25% { top: 2px; }
+          50% { top: 3px;}
+          75% { top: 2px;}
+          100% { top: 1px;}
+          }
+          @keyframes mouse-wheel {
+        
+          0% { top: 1px; }
+          25% { top: 2px; }
+          50% { top: 3px;}
+          75% { top: 2px;}
+          100% { top: 1px;}
+          }
+          @-webkit-keyframes mouse-scroll {
+        
+          0%   { opacity: 0;}
+          50%  { opacity: .425;}
+          100% { opacity: 1;}
+          }
+          @-moz-keyframes mouse-scroll {
+        
+          0%   { opacity: 0; }
+          50%  { opacity: .475; }
+          100% { opacity: 1; }
+          }
+          @-o-keyframes mouse-scroll {
+        
+          0%   { opacity: 0; }
+          50%  { opacity: .45; }
+          100% { opacity: 1; }
+          }
+          @keyframes mouse-scroll {
+        
+          0%   { opacity: 0; }
+          50%  { opacity: .5; }
+          100% { opacity: 1; }
+          }
+          .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+          }
+
+</style>
+
+<script>
+  const vendor_id = localStorage.getItem('vendor_id')
+  var currAddress = "";
+  var currName = "";
+  var currNumber = "";
+  theData = {}
+  theData['id'] = vendor_id;
+  theData = JSON.stringify(theData)
+  fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/getavendor/', {
+    method: 'POST', // Or 'PUT', 'DELETE', etc.
+    headers: {
+        'Content-Type': 'application/json'
+        // Add any additional headers if needed
+    },
+    body: theData // Convert data to JSON string
+})
+.then(data => data.json()).then(response => {
+    // Handle response
+    obj = JSON.parse(response["body"])
+    currAddress = obj["Items"][0]["vendor_address"]["S"]
+    document.getElementById('currAdd').innerHTML = currAddress;
+    currName = obj["Items"][0]["vendor_name"]["S"]
+    document.getElementById('currName').innerHTML = currName;
+    currNumber = obj["Items"][0]["vendor_phone"]["S"]
+    document.getElementById('currPhone').innerHTML = currNumber;
+    if (response) {
+        // Request was successful
+    } else {
+        // Request failed
+        alert('Error submitting form!');
+        alert(response)
+    }
+})
+.catch(error => {
+    // Handle error
+    console.error('Error:', error);
+    alert('Error submitting form!');
+});
+    function saveData(event) {
+        var formData = {};
+        console.log(currAddress)
+        //alert(vendor_id);
+        formData['id'] = vendor_id
+        formData['address'] = document.getElementById('newAddress').value
+        if(formData['address']===""){
+          formData['address'] = currAddress;
+        }
+        formData['phone'] = document.getElementById('newPhone').value
+        if(formData['phone']===""){
+          formData['phone'] = currNumber;
+        }
+        formData['name'] = document.getElementById('newName').value
+        if(formData['name']===""){
+          formData['name'] = currName;
+        }
+		    //alert(formData);
+        var records = {}
+        records["body"] = formData
+        //alert(JSON.stringify(records));
+
+        submitForm(JSON.stringify(records))
+        //submitForm('{"body":{"id":"167389","address":"11525 Lake Stone Dr.","phone":"5123452789","name":"Test2019"}}')
+    }
+
+
+    // Function to submit the form
     function submitForm(formData) {
-        console.log(formData)
+        //alert(formData);
+        console.log(typeof formData)
         fetch('https://c91dhm43m2.execute-api.us-east-1.amazonaws.com/dev/update', {
             method: 'POST', // Or 'PUT', 'DELETE', etc.
             headers: {
                 'Content-Type': 'application/json'
                 // Add any additional headers if needed
             },
-            body: formData // Convert data to JSON string
+            body: formData //'{"body":{"id":"167389","address":"11525 Lake Stone Dr.","phone":"5123452789","name":"Test101"}}' // Convert data to JSON string
         })
         .then(response => {
             // Handle response
@@ -573,68 +572,73 @@
             alert('Error submitting form!');
         });
     }
-          function toggleMenu() {
-            var menu = document.getElementById('menu');
-            var menuIcon = document.getElementById('menu-icon');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-                menuIcon.innerHTML = '&#9776;';
-            } else {
-                menu.style.display = 'flex';
-                menuIcon.innerHTML = '&times;';
-            }
-        }
-      
-      
-      
-      </script>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-      <script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      var menuIcon = document.getElementById('menu-icon');
+      if (menu.style.display === 'flex') {
+          menu.style.display = 'none';
+          menuIcon.innerHTML = '&#9776;';
+      } else {
+          menu.style.display = 'flex';
+          menuIcon.innerHTML = '&times;';
+      }
+  }
+
+
+
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/papaparse/papaparse.min.js"></script>
 </head>
 <body>
-    <div class="background background-tint">
-        <div class="header">
-            <div class="logo">StrEATS</div>
-            <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
-            <div class="menu" id="menu">
-                <a href="index.html">Home</a>
-                <a href="search.html">Search</a>
-                <a href="nearme.html">Near Me</a>
-                <a href="aboutUS.html">About Us</a>
-                <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
-            </div>
+  <div class="background background-tint">
+      <div class="header">
+          <div class="logo">StrEATS</div>
+          <div class="menu-icon" onclick="toggleMenu()" id="menu-icon">&#9776;</div>
+          <div class="menu" id="menu">
+              <a href="index.html">Home</a>
+              <a href="search.html">Search</a>
+              <a href="nearme.html">Near Me</a>
+              <a href="aboutUS.html">About Us</a>
+              <a href="https://powerhouse.auth.us-east-1.amazoncognito.com/oauth2/authorize?client_id=t0gqo68dn503t3vg86uragk0v&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https%3A%2F%2Fadvaithbinu11.github.io%2Fpowerhouse-proto%2Flogged_in.html">Login</a>
+          </div>
+      </div>
+      <table><tr><td>
+      <div class="section">
+        <h2>Current Information</h2>
+        <div class="info">
+            <label for="currentName">Business Name:</label>
+            <span id="currName">John Doe</span>
         </div>
-        <div class="h4">Update Vendor Info</div>
-    <form>
-        <div class="section">
-            <h2>Current Information</h2>
-            <div class="info">
-                <label for="currentName">Business Name:</label>
-                <span id="currName">John Doe</span>
-            </div>
-            <div class="info">
-                <label for="currentAddress">Address:</label>
-                <span id="currAdd">123 Main St, Anytown, USA</span>
-            </div>
-            <div class="info">
-                <label for="currPhone">Phone Number:</label>
-                <span id="currPhone">555-1234</span>
-            </div>
+        <div class="info">
+            <label for="currentAddress">Address:</label>
+            <span id="currAdd">123 Main St, Anytown, USA</span>
         </div>
+        <div class="info">
+            <label for="currPhone">Phone Number:</label>
+            <span id="currPhone">555-1234</span>
+        </div>
+    </div>
+    </td> <td>
+    <div class="section">
+        <h2>Enter New Information</h2>
+        <label for="newName">Name:</label>
+        <input type="text" id="newName" name="newName">
+        <label for="newAddress2">Vendor Address:</label>
+        <input type="text" id="newAddress" name="newAddress2">
+        <label for="newZip">Zip Code:</label>
+        <input type="text" id="newZip" name="newZip">
+        <label for="newZip">Phone Number:</label>
+        <input type="text" id="newPhone" name="newPhone">
+    </div>
+  </td> <td>
+    <button onclick="saveData(event)">Submit</button>
+  </td> </tr></table>  
+  </div>
+  
+  
+  </body>
 
-        <div class="section">
-            <h2>Enter New Information</h2>
-            <label for="newName">Name:</label>
-            <input type="text" id="newName" name="newName">
-            <label for="newAddress2">Vendor Address:</label>
-            <input type="text" id="newAddress" name="newAddress2">
-            <label for="newZip">Phone Number:</label>
-            <input type="text" id="newPhone" name="newPhone">
-        </div>
 
-        <button onclick="saveData(event)">Update</button>
-    </form>
-</div>
-</body>
 </html>
