@@ -520,6 +520,7 @@
     alert('Error submitting form!');
 });
     function saveData(event) {
+	alert("Updating...");
         var formData = {};
         console.log(currAddress)
         //alert(vendor_id);
@@ -562,11 +563,11 @@
             // Handle response
             if (response.ok) {
                 // Request was successful
-                alert('Form submitted successfully!');
+                alert('Updated successfully!');
                 location.reload();
             } else {
                 // Request failed
-                alert('Error submitting form!');
+                alert('Error updating!');
                 alert(response)
             }
         })
