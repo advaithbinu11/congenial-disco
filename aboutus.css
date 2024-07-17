@@ -4,24 +4,24 @@
     src: url('TT Firs Neue Trial Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: 'Medium';
     src: url('TT Firs Neue Trial Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
   
-  body, html {
+body, html {
     margin: 0;
     padding: 0;
     align-items: center;
     font-family: 'Bold', Arial, sans-serif;
-  }
-  
-  /* Map container styles */
-  .super-container {
+}
+
+/* Map container styles */
+.super-container {
     display: flex;
     height: 600px; /* Set the desired height for the map */
     width: 80%; /* Make the map take the full width of its container */
@@ -30,9 +30,9 @@
     border-radius: 6px;
     background-color: #e74141;
     position: absolute;
-  }
+}
   
-  .h4 {
+.h4 {
     font-family: 'Bold';
     height: 60px;
     width: 100%;
@@ -43,23 +43,23 @@
     text-align: center;
     font-size: 60px;
     text-shadow: 2px 2px 2px rgb(255, 47, 47);
-  }
+}
   
-  .boxholder {
+.boxholder {
     height: 584px; /* Set the desired height for the map */
     width: 100% - 8px; /* Make the map take the full width of its container */
     border-radius: 5px;
     margin-top: 8px;
     margin-right: 8px;
-  }
-  .boxholder-special {
+}
+.boxholder-special {
     height: 584px; /* Set the desired height for the map */
     width: 100% - 8px; /* Make the map take the full width of its container */
     border-radius: 5px;
     margin-top: 8px;
     margin-right: 8px;
-  }
-  .map-container {
+}
+.map-container {
     margin: 0px;
     height: 580px; /* Set the desired height for the map */
     width: 30%; /* Make the map take the full width of its container */
@@ -68,14 +68,14 @@
     justify-content: center;
     font-size:24px;
     padding:10px 20px 10px 5px;
-  }
-  .map-container li{
+}
+.map-container li{
     padding:10px 20px 10px 5px;
-  }
-  .map-container ul{
+}
+.map-container ul{
     padding:0px 0px 0px 60px;
-  }
-  .boxholder h5 {
+}
+.boxholder h5 {
     font-family: 'Bold';
     height: 45px;
     width: 100%;
@@ -85,9 +85,9 @@
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 2px rgb(255, 120, 47);
-  }
+}
   
-  .ucontainer {
+.ucontainer {
     display: flex;
     align-items: center;
     background: #e74141;
@@ -97,66 +97,66 @@
     margin-top: 10px;
     width: 74%; /* Width of the outside container */
     box-shadow: 0px 32px 40px -19px rgba(0,0,0,0.25);
-  }
+}
   
-  /* The slider itself */
-  .slider {
+/* The slider itself */
+.slider {
     appearance: none;  /* Override default CSS styles */
     width: 100%; /* Full-width */
     height: 6px; /* Specified height */
     background: #ff6060; /* Green background */
     outline: none; /* Remove outline */
     border-radius: 5px;
-  }
+}
   
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
     appearance: none; /* Override default look */
     width: 20px; /* Set a specific slider handle width */
     height: 20px; /* Slider handle height */
     background: #b01515; /* Green background */
     border-radius: 50%;
     cursor: pointer; /* Cursor on hover */
-  }
+}
   
-  .boxholder-special img {
+.boxholder-special img {
     width: 50%;
     margin-left: 25%;
     margin-top: 120px;
-  }
-  .boxholder img {
+}
+.boxholder img {
     width: 50%;
     height:60%;
     margin-left: 25%;
     margin-top: 30px;
-  }
-  .boxholder a:link{
+}
+.boxholder a:link{
     color:white
-  }
-  .boxholder a:hover{
+}
+.boxholder a:hover{
     color:#c5b7b7
-  }
-  .boxholder a:visited {
+}
+.boxholder a:visited {
     color: whitesmoke;
-  }
-  .boxholder ul{
+}
+.boxholder ul{
     margin-top: 0px;
-  }
-  .boxholder li{
+}
+.boxholder li{
     text-align: left;
     padding:10px 20px 20px 20px;
     font-size:20px;
-  }
-  .slider::-moz-range-thumb {
+}
+.slider::-moz-range-thumb {
     appearance: none; /* Override default look */
     width: 20px; /* Set a specific slider handle width */
     height: 20px; /* Slider handle height */
     background: #ff6060; /* Green background */
     border-radius: 50%;
     cursor: pointer; /* Cursor on hover */
-  }
+}
   
-  .value {
+.value {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,32 +167,42 @@
     width: 80px;
     height: 40px;
     border-radius: 5px;
-  }
+}
+
+.boxdefinal {
+    background-color: white;
+    color: #7e0000;
+    width: 20%;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 0px 5px;
+    align-items: center;
+}
   
-  .background {
+.background {
     background-image: url('title-image.jpg');
     color: white;
     transition: background-color 0.5s ease; 
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    height: 900px;
+    height: 230vh;
     object-fit: cover;
-  }
+}
   
-  .background-tint {
+.background-tint {
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
     opacity: 0; /* Initial state with no opacity */
     animation: tintIn  1s forwards; /* Animation with 3s delay and 3s duration */
-  }
+}
   
-  @keyframes tintIn {
+@keyframes tintIn {
     to {
         opacity: 1; /* Final state with full opacity */
     }
-  }
+}
   
-  .header {
+.header {
     position: relative;
     background: #fff;
     color: #000000;
@@ -201,42 +211,42 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 5px solid #ff0000;
-  }
+}
   
-  .header .logo {
+.header .logo {
     font-size: 24px;
     font-weight: bold;
-  }
+}
   
-  .menu-icon {
+.menu-icon {
     cursor: pointer;
     font-size: 30px;
-  }
+}
   
-  .container {
+.container {
     text-align: center;
     padding: 50px;
     position: relative;
     background: transparent; 
     height: 100vh;
     border-bottom: 1.5px solid #000000;
-  }
+}
   
-  .container h1 {
+.container h1 {
     margin-top: 225px;
     font-size: 4em;
     margin-bottom: 0px;
     text-shadow: 2px 2px 2px rgb(255, 0, 0);
-  }
+}
   
-  .container h2 {
+.container h2 {
     font-family: 'Medium';
     margin-top: 0px;
     font-size: 3em;
     text-shadow: 2px 2px 2px rgb(255, 0, 0);
-  }
+}
   
-  .o-container {
+.o-container {
     text-align: center;
     padding: 50px;
     position: relative;
@@ -244,12 +254,12 @@
     width: 100%;
     padding-top: 90%;
     border-bottom: 1.5px solid #000000;
-  }
-  .boxholder p{
+}
+.boxholder p{
     padding-bottom: 0px;
     text-align: center;
-  }
-  .menu {
+}
+.menu {
     font-family: 'Medium';
     display: none;
     flex-direction: row;
@@ -258,64 +268,228 @@
     position: absolute;
     top: 20px;
     right: 70px;
-  }
+}
   
-  /* Add your custom font style to the Leaflet popup content */
-  .leaflet-popup-content {
+/* Add your custom font style to the Leaflet popup content */
+.leaflet-popup-content {
     font-family: 'Medium', sans-serif; /* Replace 'Arial' with your desired font */
     font-size: 20px; /* Adjust the font size as needed */
     color: #333; /* Change the text color */
     text-align: center;
-  }
+}
   
-  /* Add your custom font style to the Leaflet popup content wrapper */
-  .leaflet-popup-content-wrapper {
+/* Add your custom font style to the Leaflet popup content wrapper */
+.leaflet-popup-content-wrapper {
     background-color: #ffaeae; /* Change the background color */
     padding: 10px; /* Adjust the padding */
     width: 350px;
     border-radius: 5px; /* Add rounded corners */
-  }
+}
   
-  .leaflet-popup-content .popup-title {
+.leaflet-popup-content .popup-title {
     font-family: 'Bold', sans-serif; /* Replace 'Arial' with your desired font */
     font-size: 16px; /* Adjust the font size for the title */
     color: #333; /* Change the text color */
-  }
+}
   
-  .leaflet-popup-content .popup-subtitle {
+.leaflet-popup-content .popup-subtitle {
     font-family: 'Medium', sans-serif; /* Replace 'Arial' with your desired font */
     font-size: 10px; /* Adjust the font size for the subtitle */
     color: #666; /* Change the text color */
-  }
+}
   
-  .menu a {
+.menu a {
     text-decoration: none;
     color: black;
     font-size: 1.2em;
-  }
+}
   
-  .menu a:hover {
+.menu a:hover {
     color: #ffffff;
-  }
+}
   
-  .info-container {
+.info-container {
     flex: 1;
     color: white;
     overflow-y: auto;
 
-  }
+}
   
-  .info-container .info-content {
+.info-container .info-content {
     display: none;
-  }
+}
   
-  .info-container.active .info-content {
+.info-container.active .info-content {
     display: block;
     
-  }
+}
   
-  
-  
-  .info-container.active .boxholder img {
+.info-container.active .boxholder img {
     display: none;
-  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body{
+  background: #e67a7a;
+}
+
+.wrapper{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.wrapper h1{
+  font-family: 'Medium';
+  font-size: 48px;
+  color:#7e0000;
+  margin-bottom: 25px;
+}
+
+.our_team{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our_team .team_member{
+  width: 250px;
+  margin: 5px;
+  background: #fff;
+  padding: 20px 20px;
+  border-radius: 20px;
+  box-shadow: #000000 10px;
+}
+
+.our_team .team_member .member_img{
+  background: #ffc7c7;  
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.our_team .team_member h3{
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+  color: #7e0000;
+  font-family: 'Medium';
+}
+
+.our_team .team_member span{
+  font-size: 13px;
+  color: #000000;
+  font-family: 'Medium';
+}
+
+.our_team .team_member p{
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  font-family: 'Medium';
+}
+
+.our_team .team_member .member_img .social_media{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.65);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+   transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img .social_media .item{
+  margin: 0 10px;
+}
+
+.our_team .team_member .member_img .social_media .fab{
+  color: #e67a7a;
+  font-size: 20px;
+}
+
+.our_team .team_member .member_img:hover .social_media{
+  transform: scale(1);
+}
+
+/* Mission, Vision, and Contact Us styles */
+.section {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.section-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.section h1 {
+    font-family: 'Medium';
+    font-size: 48px;
+    color: #7e0000;
+    margin-bottom: 25px;
+}
+
+.section p {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6;
+    font-family: 'Medium';
+}
+
+
+.menu {
+    font-family: 'Medium';
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+
+    top: 20px;
+    right: 70px;
+}
+
+.menu a {
+  transition: background-color 1s, color 1s;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
